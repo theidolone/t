@@ -1,0 +1,53 @@
+<style>
+    #navbar {
+        display: flex;
+        justify-content: center;
+        width: 40%;
+        position: relative;
+        left: 66.8em;
+    }
+
+    .navbutton  {
+        display: block;
+        padding: 1.5em;
+        background-color: #3c162f;
+    }
+
+    .navbutton:hover {
+        background-color: #7c162e;
+    }
+
+    .navbutton a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navbutton:hover a {
+        color: #167C64;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 1em;
+        text-decoration-thickness: 0.2em;  
+    }
+</style>
+
+<header>
+    <nav>
+        <div id="navbar">
+
+            <div class="navbutton manrope-body">
+                <a href="index.php">Home</a>
+            </div>
+
+            <div class="navbutton manrope-body">
+                <a href="playlists.php">Playlists</a>
+            </div>
+
+            <div class="navbutton manrope-body">
+                <a href="account.php">Account</a>
+            </div>
+            
+        </div>
+    </nav>
+    <hr style="height:0.1em;background-color:#7c162e;color:#7c162e;">
+</header>

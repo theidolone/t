@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-        <style>
-                #account {
-                    background-color: #7dcd85;
-                    color: #a91aa4;
-                    text-decoration: underline #a91aa4 3px;
-                    text-underline-offset: 0.6em;
-                }
-        </style>
+        <title>Playlister</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="author" content="idol♪">
         <link rel="stylesheet" href="default.css">
+        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+        <link rel="manifest" href="site.webmanifest" />
+        <style>
+            #account {
+                text-decoration-style: underline;
+                text-decoration-color: #167c64;
+                text-underline-offset: 1em;
+                text-decoration-thickness: 0.2em;
+            }
+        </style>
     </head>
 
     <body>
         <?php
         include("header.php")
         ?>
-        <section id="wrapper">
 
-        <div id="root">
-            <div id="title">
-                <h1>cool title for the body</h1>
-            </div>
+        <h1 class="manrope-title">Placeholder Page</h1>
+        <p class="manrope-body">type shi</p>
 
-            <div id="content">
-                <p>and some body text too</p>
-            </div>
-
-        </div>
-
-        </section>
         <?php
         include("footer.php")
         ?>
     </body>
-
 </html>

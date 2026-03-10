@@ -1,8 +1,5 @@
-<?php
-session_start()
-?>
 <!DOCTYPE html>
-<html lang="en-uk">
+<html>
     <head>
         <title>Playlister</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +12,7 @@ session_start()
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
         <link rel="manifest" href="site.webmanifest" />
         <style>
-            #home {
+            #playlists {
                 text-decoration-style: underline;
                 text-decoration-color: #167c64;
                 text-underline-offset: 1em;
@@ -25,16 +22,15 @@ session_start()
     </head>
 
     <body>
-        <?php 
-        include ("header.php")
+        <?php
+        include("header.php")
         ?>
 
-        <h1 class="manrope-title">Welcome to Playlister</h1>
-        <p class="manrope-body"> Filler Body </p>
+        <h1 class="manrope-title">Placeholder Page</h1>
+        <p class="manrope-body">type shi</p>
 
         <?php
-        include ("footer.php")
+        include("footer.php")
         ?>
     </body>
-
 </html>

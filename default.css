@@ -1,36 +1,19 @@
-#title, #content {
-                    display: flex;
-                    justify-content: center;
-                }
-#content {
-    margin-top: 3%;
-}
 body {
-    background: #BAC7BE;
+    background: #191528;
+    color: white;
 }
 
 
 .manrope-title {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
-
 
 .manrope-body {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.paragraph {
-  display: flex;
-  justify-content: center;
-  padding: 0.5em;
-  background-color: rgba(99, 99, 99, 0.5);
-  border-radius: 30px;
-  width: 5em;
-  height: auto;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
