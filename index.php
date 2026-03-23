@@ -2,9 +2,9 @@
 session_start()
 ?>
 <!DOCTYPE html>
-<html lang="en-uk">
+<html lang="en-uk" data-theme="light">
     <head>
-        <title>Greenfield Local Hub</title>
+        <title>Home - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="defaultstyle.css">
@@ -15,12 +15,39 @@ session_start()
         include ("header.php")
         ?>
 
-        <h1 class="manrope-title">Welcome to Greenfield Local Hub</h1>
-        <p class="manrope-body"> Filler Body </p>
+        <main>
+            <div class="slideshow-container">
+                <div class="slides fade">
+                    <img src="./images/carrots.jpg" style="width: 100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="./images/potatoes.avif" style="width: 100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="./images/tomatoes.jpg" style="width: 100%;">
+                </div>
+            </div>
+        </main>
         
         <?php
         include ("footer.php")
         ?>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 5000);
+            }
+        </script>
     </body>
 
 </html>

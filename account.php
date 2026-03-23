@@ -2,9 +2,9 @@
 session_start()
 ?>
 <!DOCTYPE html>
-<html lang="en-uk">
+<html lang="en-uk" data-theme="light">
     <head>
-        <title>GLH</title>
+        <title>Account - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="defaultstyle.css">
@@ -18,7 +18,7 @@ session_start()
         </style>
     </head>
 
-    <body>
+    <body class="default-body dark">
         <?php 
         include ("header.php")
         ?>

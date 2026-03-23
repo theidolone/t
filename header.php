@@ -1,7 +1,7 @@
 <header>
     <nav>
         <div id="navbar">
-            <a href="index.php"><img src="glhLogo.png" width="64px" height="64px" style="position:relative;right:85em;"></a> 
+            <a href="index.php"><img src="./images/glhLogo.png" width="64px" height="64px" style="position:relative;right:85em;"></a> 
 
                 <a id="basket" class="navbutton-default dark manrope-body" href="basket.php" style="border-right-style: solid; border-width:2px; border-color:rgba(255,255,255,0.8);">Basket</a>
                 

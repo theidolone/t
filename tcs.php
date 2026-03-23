@@ -2,15 +2,15 @@
 session_start()
 ?>
 <!DOCTYPE html>
-<html lang="en-uk">
+<html lang="en-uk" data-theme="light">
     <head>
-        <title>Greenfield Local Hub</title>
+        <title>T&C - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="defaultstyle.css">
     </head>
 
-    <body>
+    <body class="default-body dark">
         <?php 
         include ("header.php")
         ?>
