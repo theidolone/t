@@ -1,4 +1,6 @@
 <footer>
     <nav>
-        <a href="#">About Me</a>
-        <a href="#">Contact me</a>
+        <a id="about" href="about.html">About GLH</a>
+        <a id="tcs" href="tcs.html">Terms and Conditions</a>
+    </nav>
+</footer>

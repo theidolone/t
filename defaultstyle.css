@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background: #FCEFEF;
+    color: #040303;
+}
+
+.manrope-title {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.manrope-body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    position: relative;
+    left: 90em;
+}
+
+.navbutton  {
+    display: block;
+    padding: 1.5em;
+    background-color: #FCD29F;
+    text-decoration: none;
+    color: #040303;
+}
+
+.navbutton:hover {
+    background-color: #7FD8BE;
+    text-decoration: underline;
+    text-decoration-color: #357266;
+    text-underline-offset: 1em;
+    text-decoration-thickness: 0.2em;
+}
+
+header {
+    background: #FCD29F;
+}
+
+footer {
+    background-color: #FCD29F;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#about, #tcs {
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #357266;
+    text-align: center;
+}
