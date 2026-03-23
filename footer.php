@@ -1,6 +1,6 @@
 <footer>
     <nav>
-        <a id="about" href="about.html">About GLH</a>
-        <a id="tcs" href="tcs.html">Terms and Conditions</a>
+        <a id="about" href="about.php">About GLH</a>
+        <a id="tcs" href="tcs.php">Terms and Conditions</a>
     </nav>
 </footer>

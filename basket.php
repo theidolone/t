@@ -18,7 +18,7 @@ session_start()
         </style>
     </head>
 
-    <body>
+    <body class="default-body dark">
         <?php 
         include ("header.php")
         ?>
