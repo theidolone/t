@@ -101,20 +101,28 @@ footer {
     }
 }
 
-#about, #tcs {
-    display: block;
-    padding: 0.5em;
-    margin: 0.5em;
+#footer-links {
+    display: flex;
     color: #357266;
     text-align: center;
 }
 
+#about, #tcs {
+    display: flex;
+    justify-self: center;
+}
+
 @media (prefers-color-scheme: dark) {
     #about, #tcs {
-        display: block;
-        padding: 0.5em;
-        margin: 0.5em;
-        color: #FCEFEF;
+        display: flex;
+        justify-self: center;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #footer-links {
+        display: flex;
+        color: #357266;
         text-align: center;
     }
 }
@@ -147,7 +155,7 @@ footer {
     display: block;
 }
 
-.dropdown:hover .dropdown-content {display: block;}
+.show {display: block;}
 
 * {box-sizing: border-box;}
 .slides {display: none;}

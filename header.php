@@ -8,8 +8,8 @@
                 <a id="account" class="navbutton-default dark manrope-body" href="account.php" style="border-right-style: solid; border-width:1px; border-color:rgba(255,255,255,0.8);">Account</a>
 
                 <div class="dropdown">
-                    <a id="settings" class="navbutton-default dark manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Settings</a>
-                    <div class="dropdown-content dark">
+                    <a id="settings" onclick="dropdown()" class="dropbtn navbutton-default dark manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Settings</a>
+                    <div id="mydropdown" class="dropdown-content dark">
                         <button> setting 1 </button>
                         <button> setting 2 </button>
                     </div>
@@ -19,4 +19,22 @@
             
         </div>
     </nav>
+    <script>
+        function dropdown() {
+            document.getElementById("mydropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches(".dropbtn")) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropwdown = dropdowns[i];
+                    if  (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        }
+    </script>
 </header>

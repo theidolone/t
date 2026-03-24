@@ -2,7 +2,7 @@
 session_start()
 ?>
 <!DOCTYPE html>
-<html lang="en-uk" data-theme="light">
+<html lang="en-uk">
     <head>
         <title>Home - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +18,18 @@ session_start()
         <main>
             <div class="slideshow-container">
                 <div class="slides fade">
-                    <img src="./images/carrots.jpg" style="width: 100%;">
+                    <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
                 </div>
                 <div class="slides fade">
-                    <img src="./images/potatoes.avif" style="width: 100%;">
+                    <a href="potatoes.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
                 </div>
                 <div class="slides fade">
-                    <img src="./images/tomatoes.jpg" style="width: 100%;">
+                    <a href="tomatoes.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                </div>
+            </div>
+
+            <div class="listing-container">
+                <div class="product">
                 </div>
             </div>
         </main>

@@ -2,7 +2,7 @@
 session_start()
 ?>
 <!DOCTYPE html>
-<html lang="en-uk" data-theme="light">
+<html lang="en-uk">
     <head>
         <title>T&C - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
