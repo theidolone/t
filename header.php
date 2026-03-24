@@ -3,38 +3,27 @@
         <div id="navbar">
             <a href="index.php"><img src="./images/glhLogo.png" width="64px" height="64px" style="position:relative;right:85em;"></a> 
 
-                <a id="basket" class="navbutton-default dark manrope-body" href="basket.php" style="border-right-style: solid; border-width:2px; border-color:rgba(255,255,255,0.8);">Basket</a>
+                <a id="basket" class="navbutton-default manrope-body" href="basket.php" style="border-right-style: solid; border-width:2px; border-color:rgba(255,255,255,0.8);">Basket</a>
                 
-                <a id="account" class="navbutton-default dark manrope-body" href="account.php" style="border-right-style: solid; border-width:1px; border-color:rgba(255,255,255,0.8);">Account</a>
+                <a id="account" class="navbutton-default manrope-body" href="account.php" style="border-right-style: solid; border-width:1px; border-color:rgba(255,255,255,0.8);">Account</a>
 
-                <div class="dropdown">
-                    <a id="settings" onclick="dropdown()" class="dropbtn navbutton-default dark manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Settings</a>
-                    <div id="mydropdown" class="dropdown-content dark">
-                        <button> setting 1 </button>
-                        <button> setting 2 </button>
-                    </div>
-                </div>
-
-                <a id="home" class="navbutton-default dark manrope-body" href="index.php" style="border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Home</a>
+                <details id="settings" class="dropbtn navbutton-default manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);"><summary>Settings</summary><button onclick="toggleTheme()">Switch Theme</button></details>
+                
+                <a id="home" class="navbutton-default manrope-body" href="index.php" style="border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Home</a>
             
         </div>
     </nav>
-    <script>
-        function dropdown() {
-            document.getElementById("mydropdown").classList.toggle("show");
-        }
+        <script>
+            function toggleTheme() {
+                let theme = document.getElementById("theme")
 
-        window.onclick = function(event) {
-            if (!event.target.matches(".dropbtn")) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropwdown = dropdowns[i];
-                    if  (openDropdown.classList.contains("show")) {
-                        openDropdown.classList.remove("show");
-                    }
+                if (theme.getAttribute("href") == "defaultstyle.css") {
+                    theme.setAttribute("href", "darkstyle.css");
+                    sessionStorage.setItem("theme", theme)
+                } else {
+                    theme.setAttribute("href", "defaultstyle.css");
+                    sessionStorage.setItem("theme", theme)
                 }
             }
-        }
-    </script>
+        </script>
 </header>

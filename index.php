@@ -7,10 +7,10 @@ session_start()
         <title>Home - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="defaultstyle.css">
+        <link id="theme" rel="stylesheet" href="defaultstyle.css">
     </head>
 
-    <body class="default-body dark">
+    <body class="default-body">
         <?php 
         include ("header.php")
         ?>
@@ -53,6 +53,7 @@ session_start()
                 setTimeout(showSlides, 5000);
             }
         </script>
+
     </body>
 
 </html>
