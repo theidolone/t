@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <title>Account - GLH</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="defaultstyle.css">
+        <link id="theme" rel="stylesheet" href="defaultstyle.css">
         <style>
             #home {
                 text-decoration-style: underline;

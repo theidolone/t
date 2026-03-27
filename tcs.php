@@ -10,7 +10,7 @@ session_start()
         <link id="theme" rel="stylesheet" href="defaultstyle.css">
     </head>
 
-    <body class="default-body">
+    <body class="default-body dark">
         <?php 
         include ("header.php")
         ?>

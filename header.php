@@ -14,15 +14,23 @@
         </div>
     </nav>
         <script>
-            function toggleTheme() {
-                let theme = document.getElementById("theme")
+            preferred = localStorage.getItem("theme")
+            let scheme = document.getElementById("theme")
 
+            if (!preferred) {
+                theme.setAttribute("href", "defaultstyle.css");
+            } else {
+                theme.setAttribute("href", preferred)
+            }
+
+
+            function toggleTheme() {
                 if (theme.getAttribute("href") == "defaultstyle.css") {
                     theme.setAttribute("href", "darkstyle.css");
-                    sessionStorage.setItem("theme", theme)
+                    preferred = localStorage.setItem("theme", "darkstyle.css")
                 } else {
                     theme.setAttribute("href", "defaultstyle.css");
-                    sessionStorage.setItem("theme", theme)
+                    preferred = localStorage.setItem("theme", "defaultstyle.css")
                 }
             }
         </script>
