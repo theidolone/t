@@ -24,6 +24,7 @@ session_start();
         ?>
 
         <h1 class="manrope-title">Welcome to your account</h1>
+        <h2 class="manrope-title">Currently logged in as <?php echo $_SESSION["email"] ?></h2>
         <h3 class="manrope-title">Done here? <a href="logout.php">Log out</a></h3>
         
         <?php

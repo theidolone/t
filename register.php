@@ -3,10 +3,13 @@ require_once "config.php";
 
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
+$staff = "/@greenfield.com/";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(empty(trim($_POST["email"]))) {
-        $email_err = "Please enter an email";
+        $email_err = "Please enter an email";#
+    } elseif(preg_match($staff, $email)) {
+        $sql = "SELECT id FROM staff WHERE email = :email";
     } else {
         $sql = "SELECT id FROM customers WHERE email = :email";
 
@@ -43,9 +46,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    if(empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
-        $sql = "INSERT INTO customers (email, password) VALUES (:email, :password)";
+    if(empty($email_err) && empty($password_err) && empty($confirm_password_err) && preg_match($staff, $email)) {
+        $sql = "INSERT INTO staff (email, password) VALUES (:email, :password)";
 
+        if($stmt = $pdo->prepare($sql)) {
+            $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
+            $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+
+            $param_email = $email;
+            $param_password = password_hash($password, PASSWORD_DEFAULT);
+
+            if($stmt->execute()) {
+                header("location: login.php");
+            } else {
+                echo "Something went wrong. Please try again later.";
+            }
+            unset($stmt);
+        }
+    } elseif(empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
+        $sql = "INSERT INTO customers (email, password) VALUES (:emai;, :password)";
         if($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
