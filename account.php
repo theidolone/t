@@ -106,6 +106,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <button type="button" onclick="switchMode('login')"> Login</button>
         <button type="button" onclick="switchMode('register')"> Register</button>
 
+        <form method="post" autocomplete="off">
+            <input type="hidden" id="mode" name="mode" value="<?php echo h($mode); ?>">
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="johndoe@gmail.com" value="<?php echo h($email); ?>" />
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required placeholder="Enter a secure password" />
+            </div>
         <?php
         include ("footer.php")
         ?>
