@@ -58,44 +58,45 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Something went wrong. Please try again later.";
             }
             unset($stmt);
-        } elseif(empty($email_err) && empty($password_err)) {
-            $sql = "SELECT id, email, password FROM customers WHERE email = :email";
+        } 
+    } elseif(empty($email_err) && empty($password_err)) {
+        $sql = "SELECT id, email, password FROM customers WHERE email = :email";
 
-            if($stmt = $pdo->prepare($sql)) {
-                $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
+        if($stmt = $pdo->prepare($sql)) {
+            $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
 
-                $param_email = trim($_POST["email"]);
+            $param_email = trim($_POST["email"]);
 
-                if($stmt->execute()) {
-                    if($stmt->rowCount() == 1) {
-                        if($row = $stmt->fetch()) {
-                            $id = $row["id"];
-                            $email = $row["email"];
-                            $hashed_password = $row["password"];
-                            if(password_verify($password, $hashed_password)) {
-                                session_start();
+            if($stmt->execute()) {
+                if($stmt->rowCount() == 1) {
+                    if($row = $stmt->fetch()) {
+                        $id = $row["id"];
+                        $email = $row["email"];
+                        $hashed_password = $row["password"];
+                        if(password_verify($password, $hashed_password)) {
+                            session_start();
 
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $id;
-                                $_SESSION["email"] = $email;
+                            $_SESSION["loggedin"] = true;
+                            $_SESSION["id"] = $id;
+                            $_SESSION["email"] = $email;
 
-                                header("location: account.php");
-                            } else {
-                                $login_err = "Invalid username or password.";
-                            }
+                            header("location: account.php");
+                        } else {
+                            $login_err = "Invalid username or password.";
                         }
-                    } else {
-                        $login_err = "Invalid username or password.";
                     }
                 } else {
-                    echo "Something went wrong. Please try again later.";
+                    $login_err = "Invalid username or password.";
                 }
-                unset($stmt);
+            } else {
+                echo "Something went wrong. Please try again later.";
             }
+            unset($stmt);
         }
     }
-    unset($pdo);
 }
+    unset($pdo);
+
 ?>
 
 <!DOCTYPE html>

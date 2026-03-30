@@ -7,7 +7,7 @@
                 
                 <a id="account" class="navbutton-default manrope-body" href="login.php" style="border-right-style: solid; border-width:1px; border-color:rgba(255,255,255,0.8);">Account</a>
 
-                <details id="settings" class="dropbtn navbutton-default manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);"><summary>Settings</summary><button onclick="toggleTheme()">Switch Theme</button></details>
+                <details id="settings" class="dropbtn navbutton-default manrope-body" style="border-right-style: solid; border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8); cursor: pointer;"><summary>Settings</summary><button style="cursor: pointer;" onclick="toggleTheme()">Switch Theme</button></details>
                 
                 <a id="home" class="navbutton-default manrope-body" href="index.php" style="border-left-style: solid; border-width:1px; border-color: rgba(255,255,255,0.8);">Home</a>
             
