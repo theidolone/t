@@ -14,16 +14,10 @@
         </div>
     </nav>
         <script>
+            //grab the preferred theme from local storage
             preferred = localStorage.getItem("theme")
-            let scheme = document.getElementById("theme")
 
-            if (!preferred) {
-                theme.setAttribute("href", "defaultstyle.css");
-            } else {
-                theme.setAttribute("href", preferred)
-            }
-
-
+            //check what the current stylesheet is and set it to the opposite on click, then store that as the preferred theme
             function toggleTheme() {
                 if (theme.getAttribute("href") == "defaultstyle.css") {
                     theme.setAttribute("href", "darkstyle.css");
@@ -33,5 +27,19 @@
                     preferred = localStorage.setItem("theme", "defaultstyle.css")
                 }
             }
+
+            function detectScheme() {
+                //check if a preferred theme exists, and set it to the default stylesheet if not
+                if (preferred) {
+                    theme.setAttribute("href", preferred);
+                } else if (!window.matchMedia) {
+                    return false;
+                } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    theme.setAttribute("href", "darkstyle.css")
+                }
+            }
+            
+            
+            detectScheme();
         </script>
 </header>

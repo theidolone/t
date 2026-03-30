@@ -64,7 +64,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             unset($stmt);
         }
     } elseif(empty($email_err) && empty($password_err) && empty($confirm_password_err)) {
-        $sql = "INSERT INTO customers (email, password) VALUES (:emai;, :password)";
+        $sql = "INSERT INTO customers (email, password) VALUES (:email, :password)";
+
         if($stmt = $pdo->prepare($sql)) {
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
