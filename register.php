@@ -90,6 +90,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link id="theme" rel="stylesheet" href="defaultstyle.css">
+        <style>
+            #account {
+                text-decoration: underline;
+                text-decoration-color: var(--accent);
+                text-underline-offset: 1em; 
+                text-decoration-thickness: 0.2em;
+            }
+        </style>
     </head>
 
     <body class="default-body">
@@ -117,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
                 <input type="submit" value="Submit">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>Already have an account? <a href="login.php" style="color: var(--accent)">Login here</a>.</p>
         </form>
         <?php include("footer.php") ?>
     </body>

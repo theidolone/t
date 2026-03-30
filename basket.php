@@ -9,9 +9,9 @@ session_start()
         <meta charset="utf-8">
         <link id="theme" rel="stylesheet" href="defaultstyle.css">
         <style>
-            #home {
-                text-decoration-style: underline;
-                text-decoration-color: #357266;
+            #basket {
+                text-decoration: underline;
+                text-decoration-color: var(--accent);
                 text-underline-offset: 1em;
                 text-decoration-thickness: 0.2em;
             }

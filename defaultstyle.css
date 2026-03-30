@@ -1,8 +1,15 @@
+:root {
+    --bg-primary: #FCEFEF;
+    --bg-secondary: #FCD29F;
+    --highlight: #7FD8BE;
+    --accent: #357266;
+    --text: #040303;
+}
 
 .default-body {
     margin: 0;
-    background-color: #FCEFEF;
-    color: #040303;
+    background-color: var(--bg-primary);
+    color: var(--text);
 }
 
 .manrope-title {
@@ -30,25 +37,25 @@
 .navbutton-default  {
     display: block;
     padding: 1.5em;
-    background-color: #FCD29F;
+    background-color: var(--bg-secondary);
     text-decoration: none;
-    color: #040303;
+    color: var(--text);
 }
 
 .navbutton-default:hover {
-    background-color: #7FD8BE;
+    background-color: var(--highlight);
     text-decoration: underline;
-    text-decoration-color: #357266;
+    text-decoration-color: var(--accent);
     text-underline-offset: 1em;
     text-decoration-thickness: 0.2em;
 }
 
 header {
-    background: #FCD29F;
+    background: var(--bg-secondary);
 }
 
 footer {
-    background-color: #FCD29F;
+    background-color: var(--bg-secondary);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -59,14 +66,23 @@ footer {
 
 #footer-links {
     display: flex;
-    color: #357266;
-    text-align: center;
     justify-content: center;
 }
 
 #about, #tcs {
     display: flex;
     justify-content: center;
+    color: var(--accent);
+    margin-top: 1.2em;
+}
+
+#about {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#tcs {
+     padding-left: 1em;
 }
 
 .dropdown {
@@ -77,7 +93,7 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #FCD29F;
+    background-color: var(--bg-secondary);
     min-width: 100px;
     z-index: 1;
 }
@@ -108,4 +124,46 @@ img {vertical-align: middle;}
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.card {
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.price {
+    color: var(--text);
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: var(--bg-primary);
+    background-color: var(--accent);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+body {
+    overflow: auto;
+}
+
+listing-container {
+    display: flex;
 }

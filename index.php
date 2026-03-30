@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en-uk">
@@ -8,6 +8,14 @@ session_start()
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link id="theme" rel="stylesheet" href="defaultstyle.css">
+        <style>
+            #home {
+                text-decoration: underline;
+                text-decoration-color: var(--accent);
+                text-underline-offset: 1em; 
+                text-decoration-thickness: 0.2em;
+            }
+        </style>
     </head>
 
     <body class="default-body">
@@ -21,15 +29,22 @@ session_start()
                     <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
                 </div>
                 <div class="slides fade">
-                    <a href="potatoes.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
+                    <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
                 </div>
                 <div class="slides fade">
-                    <a href="tomatoes.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                    <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
                 </div>
             </div>
 
-            <div class="listing-container">
-                <div class="product">
+            <h1 class="manrope-title" style="text-decoration: underline; text-align: center;">Product Range</h1>
+
+            <div class="listing-container manrope-body">
+                <div class="card">
+                    <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
+                    <h1 class="manrope-body">Nairobi Carrots</h1>
+                    <p class="price">£1.99</p>
+                    <p>Organic Nairobi carrots harvested locally</p>
+                    <p><button>Add to basket</button></p>
                 </div>
             </div>
         </main>
