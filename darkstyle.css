@@ -52,6 +52,9 @@
 
 header {
     background-color: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 footer {
@@ -166,4 +169,8 @@ img {vertical-align: middle;}
 
 body { 
     overflow: auto;
+}
+
+.listing-container {
+    display: flex;
 }

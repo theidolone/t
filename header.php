@@ -29,16 +29,15 @@
             }
 
             function detectScheme() {
-                //check if a preferred theme exists, and set it to the default stylesheet if not
+                //check if a preferred theme exists
                 if (preferred) {
                     theme.setAttribute("href", preferred);
-                } else if (!window.matchMedia) {
+                } else if (!window.matchMedia) {    //check if (prefers-color-scheme) is supported
                     return false;
                 } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                    theme.setAttribute("href", "darkstyle.css")
-                }
+                    theme.setAttribute("href", "darkstyle.css") //dark mode if no preference
+                }                                               // and system scheme is dark
             }
-            
             
             detectScheme();
         </script>

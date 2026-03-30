@@ -24,17 +24,26 @@ session_start();
         ?>
 
         <main>
-            <div class="slideshow-container">
-                <div class="slides fade">
-                    <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
+
+
+            <section>
+
+                <h1 class="manrope-title" style="text-align: center;">Welcome to Greenfield Local Hub</h1>
+                <h3 class="manrope-body" style="text-align: center;">Browse our stock by clicking on the images below, or scrolling down to our product range!</h4>
+
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
+                    </div>
+                    <div class="slides fade">
+                        <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
+                    </div>
+                    <div class="slides fade">
+                        <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                    </div>
                 </div>
-                <div class="slides fade">
-                    <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
-                </div>
-                <div class="slides fade">
-                    <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
-                </div>
-            </div>
+            </section>
+
 
             <h1 class="manrope-title" style="text-decoration: underline; text-align: center;">Product Range</h1>
 
@@ -46,7 +55,23 @@ session_start();
                     <p>Organic Nairobi carrots harvested locally</p>
                     <p><button>Add to basket</button></p>
                 </div>
+                <div class="card">
+                    <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
+                    <h1 class="manrope-body">Potatoes</h1>
+                    <p class="price">£1.50</p>
+                    <p>Organic potatoes harvested locally</p>
+                    <p><button>Add to basket</button></p>
+                </div>
+                <div class="card">
+                    <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                    <h1 class="manrope-body">Tomatoes</h1>
+                    <p class="price">£2.99</p>
+                    <p>Organic tomatoes harvested locally</p>
+                    <p><button>Add to basket</button></p>
+                </div>
             </div>
+
+
         </main>
         
         <?php
