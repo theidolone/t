@@ -171,17 +171,19 @@ body {
     display: flex;
 }
 
-#info {
-    display: flex;
-    width: 50%;
+#about-info, #info, #contact {
+    height: 100%;
 }
 
-#contact {
-    display: flex;
-    width: 50%;
+#about-info {
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
-#about-main {
-    display: flex;
-    justify-content: space-evenly;
+#info, #contact {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
 }

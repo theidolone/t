@@ -174,3 +174,16 @@ body {
 .listing-container {
     display: flex;
 }
+
+#about-info {
+    display: flex;
+}
+
+#info, #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    
+}

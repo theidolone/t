@@ -15,8 +15,8 @@ session_start()
         include ("header.php")
         ?>
 
-        <h1 class="manrope-title">Welcome to Greenfield Local Hub</h1>
-        <p class="manrope-body"> Filler Body </p>
+        <h1 class="manrope-title" style="text-align: center; text-decoration: underline;">Terms and Conditions</h1>
+        <p class="manrope-body" style="text-align: center;">Legal things</p>
         
         <?php
         include ("footer.php")

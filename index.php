@@ -33,13 +33,13 @@ session_start();
 
                 <div class="slideshow-container">
                     <div class="slides fade">
-                        <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
+                        <a href="products.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
                     </div>
                     <div class="slides fade">
-                        <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
+                        <a href="products.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
                     </div>
                     <div class="slides fade">
-                        <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                        <a href="products.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
                     </div>
                 </div>
             </section>
@@ -49,25 +49,25 @@ session_start();
 
             <div class="listing-container manrope-body">
                 <div class="card">
-                    <a href="carrots.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
+                    <a href="products.php"><img src="./images/carrots.jpg" style="width: 100%;"></a>
                     <h1 class="manrope-body">Nairobi Carrots</h1>
                     <p class="price">£1.99</p>
                     <p>Organic Nairobi carrots harvested locally</p>
-                    <p><button>Add to basket</button></p>
+                    <p><button id="carrot">Add to basket</button></p>
                 </div>
                 <div class="card">
-                    <a href="carrots.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
+                    <a href="products.php"><img src="./images/potatoes.avif" style="width: 100%;"></a>
                     <h1 class="manrope-body">Potatoes</h1>
                     <p class="price">£1.50</p>
                     <p>Organic potatoes harvested locally</p>
-                    <p><button>Add to basket</button></p>
+                    <p><button id="potato">Add to basket</button></p>
                 </div>
                 <div class="card">
-                    <a href="carrots.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
+                    <a href="products.php"><img src="./images/tomatoes.jpg" style="width: 100%;"></a>
                     <h1 class="manrope-body">Tomatoes</h1>
                     <p class="price">£2.99</p>
                     <p>Organic tomatoes harvested locally</p>
-                    <p><button>Add to basket</button></p>
+                    <p><button id="tomato">Add to basket</button></p>
                 </div>
             </div>
 
